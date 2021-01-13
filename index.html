@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
     />
-    <link rel="stylesheet" href="main.css" type="text/css">
+    <link rel="stylesheet" href="main.css" type="text/css" />
     <title>Etch-a-Sketch</title>
   </head>
   <body>
@@ -16,9 +16,13 @@
       <p class="flow-text">
         A browser version of something between a sketchpad and an Etch-A-Sketch.
       </p>
-      <a id="clearGrid" class="btn">Fresh Grid</a>
     </header>
     <main id="main" class="container">
+      <div id="instructions" class="grid-container">
+        <p>Please select color</p>
+        <p>Please select grid size</p>
+        <a id="clearGrid" class="btn">Fresh Grid</a>
+      </div>
       <div id="game" class="grid-container"></div>
     </main>
     <footer id="footer" class="page-footer">

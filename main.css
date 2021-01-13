@@ -8,16 +8,27 @@ body {
 }
 
 #main {
+  display: flex;
+  flex-direction: column;
   flex: 1 0 auto;
-  padding: 5%;
+}
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  column-gap: 0;
 }
 
 #game {
-  display: flex;
-  flex-direction: column;
   flex-wrap: nowrap;
-  margin: auto;
-  width: 90%;
+  width: 90vw;
+  max-width: 800px;
+}
+
+#clearGrid {
+  min-width: 100px;
+  max-width: 200px;
 }
 
 #footer {
@@ -32,12 +43,10 @@ body {
 }
 
 .square {
-  height: 25px;
-  width: 25px;
-  border: 1px var(--pri-col) dotted;
-  border-radius: 5px;
+  border-radius: 1px;
   margin: 0;
+  border: 1px silver dotted;
 }
 .square:hover {
-    background-color: var(--pri-col);
+  background-color: var(--pri-col);
 }
