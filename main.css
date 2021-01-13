@@ -1,5 +1,5 @@
 :root {
-    --pri-col: #26a69a;    
+  --pri-col: #26a69a;
 }
 body {
   display: flex;
@@ -9,8 +9,23 @@ body {
 
 #main {
   flex: 1 0 auto;
+  padding: 5%;
+}
+
+#game {
+  margin: auto;
+  width: 90%;
 }
 
 #footer {
-    background-color: var(--pri-col);
+  background-color: var(--pri-col);
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.col {
+  border-left: 1px solid var(--pri-col);
 }
