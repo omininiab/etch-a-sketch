@@ -11,10 +11,10 @@ function createGrid() {
     let thisRow = document.querySelector(`${"#row" + i}`);
     for (let j = 1; j <= n; j++) {
       //create columns
-      let col = document.createElement("div");
-      col.classList.add("col");
-      col.id = `${"row" + i + "col" + j}`;
-      thisRow.appendChild(col);
+      let square = document.createElement("div");
+      square.classList.add("square");
+      square.id = `${"square_" + i + "_" + j}`;
+      thisRow.appendChild(square);
     }
   }
 }

@@ -13,6 +13,9 @@ body {
 }
 
 #game {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
   margin: auto;
   width: 90%;
 }
@@ -23,9 +26,18 @@ body {
 
 .row {
   display: flex;
+  flex-direction: row;
   flex-wrap: nowrap;
+  margin: 0;
 }
 
-.col {
-  border-left: 1px solid var(--pri-col);
+.square {
+  height: 25px;
+  width: 25px;
+  border: 1px var(--pri-col) dotted;
+  border-radius: 5px;
+  margin: 0;
+}
+.square:hover {
+    background-color: var(--pri-col);
 }
