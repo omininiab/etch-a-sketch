@@ -1,4 +1,4 @@
-let n = 64;
+let n = 16;
 let squareColor = "red"
 
 function createGrid() {
