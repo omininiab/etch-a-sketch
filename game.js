@@ -1,5 +1,5 @@
 let n = 16;
-let squareColor = "red";
+let squareColor = "#26a69a";
 
 function createGrid() {
   const game = document.querySelector("#game");
@@ -25,8 +25,9 @@ function createGrid() {
       thisRow.appendChild(square);
     }
   }
+  return false
 }
 createGrid();
 const freshGrid = document.querySelector("#freshGrid");
-//freshGrid.addEventListener("click", createGrid());
+freshGrid.addEventListener("click", createGrid());
 
