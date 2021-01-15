@@ -1,5 +1,5 @@
 let n = 16;
-let squareColor = "red"
+let squareColor = "red";
 
 function createGrid() {
   const game = document.querySelector("#game");
@@ -19,16 +19,14 @@ function createGrid() {
       square.id = `${"square_" + i + "_" + j}`;
       square.style.maxWidth = square.style.maxHeight = `${500 / n}px`;
       square.style.width = square.style.height = `${80 / n}vw`;
+      square.onclick = function () {
+        square.style.backgroundColor = squareColor;
+      };
       thisRow.appendChild(square);
     }
   }
 }
-createGrid()
+createGrid();
 const freshGrid = document.querySelector("#freshGrid");
 //freshGrid.addEventListener("click", createGrid());
-squares = document.querySelectorAll(".square");
-squares.forEach(function(square){
-    square.onclick = function() {
-        square.style.backgroundColor = squareColor
-    }
-})
+
