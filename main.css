@@ -8,6 +8,7 @@ body {
 }
 
 #main {
+  margin: auto;
   display: flex;
   flex-direction: column;
   flex: 1 0 auto;
@@ -26,9 +27,22 @@ body {
   max-width: 800px;
 }
 
-#clearGrid {
-  min-width: 100px;
-  max-width: 200px;
+.oneLine {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border: none;
+  align-items: center;
+  column-gap: 5px;
+}
+
+#gridSize {
+  width: 160px;
+  max-width: 75%;
+}
+
+#freshGrid {
+  width: 115px;
 }
 
 #footer {
@@ -45,8 +59,9 @@ body {
 .square {
   border-radius: 1px;
   margin: 0;
-  border: 1px silver dotted;
+  border: 1px rgba(192, 192, 192, 0.307) dotted;
 }
+
 .square:hover {
   background-color: var(--pri-col);
 }

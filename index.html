@@ -13,21 +13,34 @@
   <body>
     <header class="container">
       <h1>Etch-a-Sketch</h1>
-      <p class="flow-text">
+      <p>
         A browser version of something between a sketchpad and an Etch-A-Sketch.
       </p>
     </header>
     <main id="main" class="container">
-      <div id="instructions" class="grid-container">
-        <p>Please select color</p>
-        <p>Please select grid size</p>
-        <a id="clearGrid" class="btn">Fresh Grid</a>
-      </div>
+      <form id="instructions" class="oneLine">
+        <fieldset class="oneLine">
+          <label for="colorPicker">Color:</label>
+          <input id="colorPicker" type="color" />
+        </fieldset>
+        <fieldset class="oneLine">
+          <label for="gridSize">Grid size:</label>
+          <input
+            type="range"
+            id="gridSize"
+            value="16"
+            min="16"
+            step="1"
+            max="64"
+          />
+        </fieldset>
+        <button id="freshGrid" type="submit" class="btn">Fresh Grid</button>
+      </form>
       <div id="game" class="grid-container"></div>
     </main>
     <footer id="footer" class="page-footer">
       <div class="container">
-        <p id="copyright" class="flow-text">Ominini</p>
+        <p id="copyright">Ominini</p>
       </div>
     </footer>
     <script src="https://www.ominini.com/js/main.js"></script>
