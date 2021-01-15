@@ -61,7 +61,3 @@ body {
   margin: 0;
   border: 1px rgba(192, 192, 192, 0.307) dotted;
 }
-
-.square:hover {
-  background-color: var(--pri-col);
-}

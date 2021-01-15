@@ -1,4 +1,6 @@
 let n = 64;
+let squareColor = "red"
+
 function createGrid() {
   const game = document.querySelector("#game");
   game.innerHTML = "";
@@ -21,6 +23,12 @@ function createGrid() {
     }
   }
 }
-
+createGrid()
 const freshGrid = document.querySelector("#freshGrid");
-freshGrid.addEventListener("click", createGrid());
+//freshGrid.addEventListener("click", createGrid());
+squares = document.querySelectorAll(".square");
+squares.forEach(function(square){
+    square.onclick = function() {
+        square.style.backgroundColor = squareColor
+    }
+})
