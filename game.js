@@ -1,9 +1,11 @@
-let n = 16;
-let squareColor = "#26a69a";
+let squareColor;
 
 function createGrid() {
+  console.log("create grid");
   const game = document.querySelector("#game");
   game.innerHTML = "";
+  let n = document.getElementById("gridSize").value;
+  squareColor = (nameValue = document.getElementById("colorPicker").value);
   for (let i = 1; i <= n; i++) {
     //create row
     let row = document.createElement("div");
@@ -13,7 +15,7 @@ function createGrid() {
 
     let thisRow = document.querySelector(`${"#row" + i}`);
     for (let j = 1; j <= n; j++) {
-      //create columns
+      //create squares
       let square = document.createElement("div");
       square.classList.add("square");
       square.id = `${"square_" + i + "_" + j}`;
@@ -25,9 +27,17 @@ function createGrid() {
       thisRow.appendChild(square);
     }
   }
-  return false
+  return false;
 }
-createGrid();
-const freshGrid = document.querySelector("#freshGrid");
-freshGrid.addEventListener("click", createGrid());
 
+const form = document.querySelector("#instructions");
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+  createGrid();
+  const squares = document.querySelectorAll(".square");
+  squares.forEach((square) => {
+      square.onmouseenter = function() {
+          square.style.backgroundColor = squareColor;
+      }
+  })
+});

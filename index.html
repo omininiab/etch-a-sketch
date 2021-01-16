@@ -18,17 +18,16 @@
       </p>
     </header>
     <main id="main" class="container">
-      <form id="instructions" class="oneLine">
+      <form id="instructions" class="oneLine" onsubmit="createGrid()">
         <fieldset class="oneLine">
           <label for="colorPicker">Color:</label>
-          <input id="colorPicker" value="#26a69a" type="color" />
+          <input id="colorPicker" type="color" />
         </fieldset>
         <fieldset class="oneLine">
           <label for="gridSize">Grid size:</label>
           <input
             type="range"
             id="gridSize"
-            value="16"
             min="16"
             step="1"
             max="64"
