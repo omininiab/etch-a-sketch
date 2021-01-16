@@ -1,6 +1,11 @@
 :root {
   --pri-col: #26a69a;
 }
+html {
+  background-color: #202020;
+  color: white;
+  font-size: 100%;
+}
 body {
   display: flex;
   min-height: 100vh;
@@ -39,6 +44,7 @@ body {
 #gridSize {
   width: 160px;
   max-width: 75%;
+  border: none;
 }
 
 #freshGrid {
@@ -58,5 +64,5 @@ body {
 
 .square {
   margin: 0;
-  border: 1px rgba(192, 192, 192, 0.25) dotted;
+  border: 1px rgba(19, 19, 19, 0.25) dotted;
 }
